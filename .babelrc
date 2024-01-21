@@ -1,0 +1,14 @@
+{
+  "presets": [
+    // determine compilers based on the browser matrix to support
+    "@babel/env",
+    // compiles the React code into ES5 code
+    "@babel/react",
+    // compiles the Typescript code into ES5 code
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    // support for Object Oriented Programming
+    "@babel/plugin-proposal-class-properties"
+  ]
+}
