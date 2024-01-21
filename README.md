@@ -1,4 +1,4 @@
-# Project Title
+# README template - Project Title
 
 Brief project description.
 
@@ -17,10 +17,10 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/your-project.git
+git clone https://github.com/AntoineGaudronDesjardins/template-react-typescript.git
 
 # Navigate to the project directory
-cd your-project
+cd template-react-typescript
 
 # Install dependencies
 npm install
@@ -48,7 +48,7 @@ npm run serve
 # Open your browser and visit http://localhost:8080
 ```
 
-## TODO
+## TODO List
 - [ ] first item
 - [x] second item
 - [ ] other item
