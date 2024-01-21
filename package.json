@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Template for React Typescript projects",
   "scripts": {
+    "preinstall": "cp hooks/* .git/hooks/",
     "start": "webpack-dev-server --hot --config webpack.dev.js",
     "build": "rm -rf ./build && webpack --config webpack.prod.js",
     "serve": "serve -s build",

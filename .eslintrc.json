@@ -17,10 +17,7 @@
     "sourceType": "module"
   },
 
-  "plugins": [
-    "@typescript-eslint",
-    "react"
-  ],
+  "plugins": ["@typescript-eslint", "react"],
   "settings": {
     "react": {
       "version": "detect"
@@ -33,5 +30,5 @@
     "quotes": ["warn", "single"],
     "semi": ["warn", "always"],
     "react/react-in-jsx-scope": ["off"]
-  }  
+  }
 }

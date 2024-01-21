@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Run eslint
+npm run lint -- --max-warnings=0
+
+# Store the exit code of the linter
+LINTER_EXIT_CODE=$?
+
+# If the linter failed, exit with an error code
+if [ $LINTER_EXIT_CODE -ne 0 ]; then
+  echo "Linting failed. Aborting commit."
+  echo "  Run \`npm run lint\` to run the linter"
+  echo "  Run \`npm run format\` to apply prettier code formatter"
+  exit 1
+fi
+
+# If the linter passed, allow the commit to proceed
+exit 0
