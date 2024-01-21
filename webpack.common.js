@@ -6,7 +6,8 @@ module.exports = {
   entry: path.join(__dirname, "src/index.tsx"),
   output: {
     path: path.join(__dirname, "build"),
-    filename: "index.bundle.js",
+    filename: "[name].bundle.js",
+    clean: true
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js"],
@@ -30,7 +31,7 @@ module.exports = {
       },
       { 
         test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-        use: ["file-loader"] 
+        use: "asset/resource" 
       },
     ],
   },
@@ -41,7 +42,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: 'public',
+          from: path.join(__dirname, "public"),
           to: 'public',
           globOptions: {
             ignore: ['**/index.html'],
