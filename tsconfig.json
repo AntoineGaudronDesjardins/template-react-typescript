@@ -39,6 +39,14 @@
     "allowUnusedLabels": false, // Allow Unused Labels for loops
     "strictPropertyInitialization": true, // Strict Property Initialization
 
+    // Paths alias
+    "paths": {
+      "public/*": ["./app/public/*"],
+      "routes/*": ["./app/routes/*"],
+      "utils/*": ["./app/utils/*"],
+      "src/*": ["./app/src/*"],
+    },
+
     // Declaration Files Configuration
     // "declaration": true,
     // "declarationDir": "./typings",

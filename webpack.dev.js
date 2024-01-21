@@ -6,6 +6,15 @@ module.exports = merge(common, {
   mode: "development",
   devtool: "cheap-source-map",
   devServer: {
-    static: path.join(__dirname, "src")
+    static: {
+      directory: path.join(__dirname, "app/public"),
+      publicPath: '/public',
+    },
+    historyApiFallback: true,
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
 });

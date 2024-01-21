@@ -1,17 +1,23 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  entry: path.join(__dirname, "src/index.tsx"),
+  entry: path.join(__dirname, "app/index.tsx"),
   output: {
+    publicPath: '/',
     path: path.join(__dirname, "build"),
-    filename: "[name].bundle.js",
-    clean: true
+    filename: "[chunkhash].bundle.js",
+    clean: true,
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js"],
-    modules: [path.resolve(__dirname, "src"), "node_modules"]
+    alias: {
+      public: path.resolve(__dirname, 'app/public/'),
+      routes: path.resolve(__dirname, 'app/routes/'),
+      utils: path.resolve(__dirname, 'app/utils/'),
+      src: path.resolve(__dirname, 'app/src/'),
+    },
+    modules: ["node_modules"]
   },
   module: {
     rules: [
@@ -37,18 +43,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "public/index.html"),
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.join(__dirname, "public"),
-          to: 'public',
-          globOptions: {
-            ignore: ['**/index.html'],
-          },
-        },
-      ],
+      template: path.join(__dirname, "app/public/index.html"),
     }),
   ],
 };
