@@ -1,41 +1,42 @@
 {
   "compilerOptions": {
     // Output and Directory Configuration
-    "noEmit": false,     // Disable emitting files, useful for type-checking only
+    "noEmit": false, // Disable emitting files, useful for type-checking only
     "outDir": "./build", // Output directory for compiled files
 
-     // ECMAScript Configuration
-    "target": "es5",  // Specify the ECMAScript target version for the emitted code
-    "lib": [          // Specify the libraries to be included in the compilation
-      "dom",            // Provides definitions for the DOM (Document Object Model) API
-      "dom.iterable",   // Adds iterable-related types to the DOM definitions
-      "esnext"          // Includes types for features that are part of the ECMAScript standard beyond ES5
+    // ECMAScript Configuration
+    "target": "es5", // Specify the ECMAScript target version for the emitted code
+    "lib": [
+      // Specify the libraries to be included in the compilation
+      "dom", // Provides definitions for the DOM (Document Object Model) API
+      "dom.iterable", // Adds iterable-related types to the DOM definitions
+      "esnext", // Includes types for features that are part of the ECMAScript standard beyond ES5
     ],
 
     // JavaScript and TypeScript Interoperability
-    "allowJs": true,         // Allow JavaScript files to be included in the compilation
-    "skipLibCheck": true,    // Skip type checking of declaration files
+    "allowJs": true, // Allow JavaScript files to be included in the compilation
+    "skipLibCheck": true, // Skip type checking of declaration files
     "esModuleInterop": true, // enables default imports and exports working with CommonJS modules
     "allowSyntheticDefaultImports": true, // Allow imports from modules that don't explicitly define a default export
-    
+
     // Strict Type-Checking
-    "strict": true,                           // Enable all strict type-checking options
+    "strict": true, // Enable all strict type-checking options
     "forceConsistentCasingInFileNames": true, // Ensure consistent casing of references to the same file
-    "noFallthroughCasesInSwitch": true,       // Disallow fall-through cases in switch statements
-    "noImplicitAny": true,                    // Raise error on expressions and declarations with an implied 'any' type
-    
+    "noFallthroughCasesInSwitch": true, // Disallow fall-through cases in switch statements
+    "noImplicitAny": true, // Raise error on expressions and declarations with an implied 'any' type
+
     // Module Configuration
-    "module": "esnext",         // Specify module code generation
+    "module": "esnext", // Specify module code generation
     "moduleResolution": "node", // Specify module resolution strategy
-    "resolveJsonModule": true,  // Enable importing of JSON modules
-    "isolatedModules": true,    // Ensure that each file is treated as a separate module
+    "resolveJsonModule": true, // Enable importing of JSON modules
+    "isolatedModules": true, // Ensure that each file is treated as a separate module
 
     // JSX Configuration
     "jsx": "react-jsx", // Specify JSX file extension for React
 
     // Additional configuration parameters
-    "sourceMap": true,                    // generate source map for debugging purpose
-    "allowUnusedLabels": false,           // Allow Unused Labels for loops
+    "sourceMap": true, // generate source map for debugging purpose
+    "allowUnusedLabels": false, // Allow Unused Labels for loops
     "strictPropertyInitialization": true, // Strict Property Initialization
 
     // Declaration Files Configuration
@@ -51,5 +52,5 @@
 
   // Include and Exclude Configuration
   // "include": ["src"],                       // Specify files or directories to include in compilation (if not using "exclude")
-  "exclude": ["node_modules", "build", "dist"] // Specify files or directories to exclude from compilation
+  "exclude": ["node_modules", "build", "dist"], // Specify files or directories to exclude from compilation
 }
